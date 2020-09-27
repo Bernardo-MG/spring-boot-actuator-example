@@ -239,7 +239,6 @@
       <javaee.api.version>2.2</javaee.api.version>
       <jsonpath.version>2.4.0</jsonpath.version>
       <junit.jupiter.version>5.7.0</junit.jupiter.version>
-      <liquibase.version>4.0.0</liquibase.version>
       <log4j.version>2.13.3</log4j.version>
       <mockito.version>3.5.11</mockito.version>
       <mysql.version>5.1.39</mysql.version>
@@ -472,15 +471,6 @@
          <groupId>com.zaxxer</groupId>
          <artifactId>HikariCP</artifactId>
          <version>${hikari.version}</version>
-      </dependency>
-      <!-- ============================================== -->
-      <!-- ================ LIQUIBASE =================== -->
-      <!-- ============================================== -->
-      <dependency>
-         <!-- Liquibase -->
-         <groupId>org.liquibase</groupId>
-         <artifactId>liquibase-core</artifactId>
-         <version>${liquibase.version}</version>
       </dependency>
       <!-- ============================================== -->
       <!-- ================ SNAKEYAML =================== -->
