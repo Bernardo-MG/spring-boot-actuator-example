@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.example.spring_boot_actuator_example.controller.error;
+package com.bernardomg.example.boot.actuator.controller.error;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

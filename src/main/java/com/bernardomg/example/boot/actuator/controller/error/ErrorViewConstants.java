@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.example.spring_boot_actuator_example.controller.error;
+package com.bernardomg.example.boot.actuator.controller.error;
 
 /**
  * Constants for the error view controllers.

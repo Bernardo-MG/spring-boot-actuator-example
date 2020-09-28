@@ -1,5 +1,5 @@
 
-package com.bernardomg.example.spring_boot_actuator_example;
+package com.bernardomg.example.boot.actuator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

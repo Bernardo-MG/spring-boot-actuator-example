@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.example.spring_boot_actuator_example.controller;
+package com.bernardomg.example.boot.actuator.controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
