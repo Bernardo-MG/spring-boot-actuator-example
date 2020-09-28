@@ -55,7 +55,7 @@ The project is prepared for running as a Spring Boot app:
 mvn spring-boot:run -P h2
 ```
 
-It will be accessible at [http://localhost:8080/].
+It will be accessible at [http://localhost:8080/](http://localhost:8080/).
 
 ### Running the tests
 
