@@ -97,9 +97,9 @@ If you wish to fork or modify the code, visit the [GitHub project page][scm], wh
 The project has been released under the [MIT License][license].
 
 [issues]: https://github.com/bernardo-mg/spring-boot-actuator-example/issues
-[javadoc-develop]: https://docs.bernardomg.com/development/maven/spring-boot-actuator-example/spring-boot-actuator-example/apidocs
-[javadoc-release]: https://docs.bernardomg.com/maven/spring-boot-actuator-example/spring-boot-actuator-example/apidocs
+[javadoc-develop]: https://docs.bernardomg.com/development/maven/spring-boot-actuator-example/apidocs
+[javadoc-release]: https://docs.bernardomg.com/maven/spring-boot-actuator-example/apidocs
 [license]: https://www.opensource.org/licenses/mit-license.php
 [scm]: https://github.com/bernardo-mg/spring-boot-actuator-example
-[site-develop]: https://docs.bernardomg.com/development/maven/spring-boot-actuator-example/spring-boot-actuator-example
-[site-release]: https://docs.bernardomg.com/maven/spring-boot-actuator-example/spring-boot-actuator-example
+[site-develop]: https://docs.bernardomg.com/development/maven/spring-boot-actuator-example
+[site-release]: https://docs.bernardomg.com/maven/spring-boot-actuator-example
