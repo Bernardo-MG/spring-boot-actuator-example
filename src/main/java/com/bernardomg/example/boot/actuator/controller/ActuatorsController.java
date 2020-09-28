@@ -22,39 +22,37 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.example.spring_boot_actuator_example.controller.error;
+package com.bernardomg.example.boot.actuator.controller;
 
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * Controller for home view.
+ * Controller for the home view.
  * 
  * @author Bernardo Mart&iacute;nez Garrido
  */
 @Controller
-public class ErrorController {
-
-    /**
-     * Name for the 404 error view.
-     */
-    private static final String VIEW_404 = "404";
+@RequestMapping("/actuators")
+public class ActuatorsController {
 
     /**
      * Default constructor.
      */
-    public ErrorController() {
+    public ActuatorsController() {
         super();
     }
 
     /**
-     * Shows the 404 error view.
+     * Shows the actuators list.
      * 
-     * @return the 404 error view
+     * @return the actuators list
      */
-    @RequestMapping("/404")
-    public String show404() {
-        return VIEW_404;
+    @GetMapping(path = "/list", produces = MediaType.TEXT_HTML_VALUE)
+    public String showWelcome() {
+        return "actuators/list";
     }
 
 }

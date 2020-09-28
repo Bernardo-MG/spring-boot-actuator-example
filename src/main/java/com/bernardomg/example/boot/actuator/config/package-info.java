@@ -21,38 +21,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-
-package com.bernardomg.example.spring_boot_actuator_example.controller;
-
-import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
 /**
- * Controller for the home view.
- * 
- * @author Bernardo Mart&iacute;nez Garrido
+ * Controller classes.
+ * <p>
+ * These serve as adapters between the view and the rest of the application, and
+ * are the C in the MVC architecture.
+ * <p>
+ * As the view is based on templates, these controllers are tied up to specific
+ * views, and usually they will tell the next view to be shown.
  */
-@Controller
-@RequestMapping("/actuators")
-public class ActuatorsController {
 
-    /**
-     * Default constructor.
-     */
-    public ActuatorsController() {
-        super();
-    }
-
-    /**
-     * Shows the actuators list.
-     * 
-     * @return the actuators list
-     */
-    @GetMapping(path = "/list", produces = MediaType.TEXT_HTML_VALUE)
-    public String showWelcome() {
-        return "actuators/list";
-    }
-
-}
+package com.bernardomg.example.boot.actuator.config;

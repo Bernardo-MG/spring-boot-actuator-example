@@ -20,7 +20,7 @@
 
    <groupId>com.bernardomg.example</groupId>
    <artifactId>spring-boot-actuator-example</artifactId>
-   <version>0.0.1-SNAPSHOT</version>
+   <version>1.0.0</version>
    <packaging>war</packaging>
 
    <name>Spring Boot Actuator Example</name>
@@ -239,7 +239,6 @@
       <javaee.api.version>2.2</javaee.api.version>
       <jsonpath.version>2.4.0</jsonpath.version>
       <junit.jupiter.version>5.7.0</junit.jupiter.version>
-      <liquibase.version>4.0.0</liquibase.version>
       <log4j.version>2.13.3</log4j.version>
       <mockito.version>3.5.11</mockito.version>
       <mysql.version>5.1.39</mysql.version>
@@ -421,6 +420,12 @@
          <artifactId>spring-boot-starter-actuator</artifactId>
          <version>${spring.boot.version}</version>
       </dependency>
+      <dependency>
+         <!-- Spring Boot Starter: Cache -->
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-cache</artifactId>
+         <version>${spring.boot.version}</version>
+      </dependency>
       <!-- ============================================== -->
       <!-- ================= ASPECTJ ==================== -->
       <!-- ============================================== -->
@@ -472,15 +477,6 @@
          <groupId>com.zaxxer</groupId>
          <artifactId>HikariCP</artifactId>
          <version>${hikari.version}</version>
-      </dependency>
-      <!-- ============================================== -->
-      <!-- ================ LIQUIBASE =================== -->
-      <!-- ============================================== -->
-      <dependency>
-         <!-- Liquibase -->
-         <groupId>org.liquibase</groupId>
-         <artifactId>liquibase-core</artifactId>
-         <version>${liquibase.version}</version>
       </dependency>
       <!-- ============================================== -->
       <!-- ================ SNAKEYAML =================== -->

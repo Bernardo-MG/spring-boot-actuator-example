@@ -27,4 +27,4 @@
  * These take care of application errors, and generate a response for them.
  */
 
-package com.bernardomg.example.spring_boot_actuator_example.controller.error;
+package com.bernardomg.example.boot.actuator.controller.error;

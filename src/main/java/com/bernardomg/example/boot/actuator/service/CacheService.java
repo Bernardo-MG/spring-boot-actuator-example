@@ -1,7 +1,7 @@
 /**
  * The MIT License (MIT)
  * <p>
- * Copyright (c) 2020 the original author or authors.
+ * Copyright (c) 2019 the original author or authors.
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,25 +22,10 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.example.spring_boot_actuator_example.controller.error;
+package com.bernardomg.example.boot.actuator.service;
 
-/**
- * Constants for the error view controllers.
- * 
- * @author Bernardo Mart&iacute;nez Garrido
- */
-public final class ErrorViewConstants {
+public interface CacheService {
 
-    /**
-     * Name for the error view.
-     */
-    public static final String VIEW_ERROR   = "exception";
-
-    /**
-     * Private constructor to avoid initialization.
-     */
-    private ErrorViewConstants() {
-        super();
-    }
+    public String read(final String id);
 
 }

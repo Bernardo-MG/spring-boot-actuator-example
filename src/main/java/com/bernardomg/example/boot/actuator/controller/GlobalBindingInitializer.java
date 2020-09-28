@@ -21,14 +21,37 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-/**
- * Controller classes.
- * <p>
- * These serve as adapters between the view and the rest of the application, and
- * are the C in the MVC architecture.
- * <p>
- * As the view is based on templates, these controllers are tied up to specific
- * views, and usually they will tell the next view to be shown.
- */
 
-package com.bernardomg.example.spring_boot_actuator_example.controller;
+package com.bernardomg.example.boot.actuator.controller;
+
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.InitBinder;
+
+/**
+ * Initializes all the controllers with a common configuration.
+ * 
+ * @author Bernardo Mart&iacute;nez Garrido
+ */
+@ControllerAdvice
+public class GlobalBindingInitializer {
+
+    /**
+     * Default constructor.
+     */
+    public GlobalBindingInitializer() {
+        super();
+    }
+
+    /**
+     * Sets the fields which can't be bound.
+     * 
+     * @param dataBinder
+     *            data binder
+     */
+    @InitBinder
+    public void setDisallowedFields(final WebDataBinder dataBinder) {
+        dataBinder.setDisallowedFields("id");
+    }
+
+}

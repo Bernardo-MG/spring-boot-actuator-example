@@ -21,14 +21,40 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-/**
- * Controller classes.
- * <p>
- * These serve as adapters between the view and the rest of the application, and
- * are the C in the MVC architecture.
- * <p>
- * As the view is based on templates, these controllers are tied up to specific
- * views, and usually they will tell the next view to be shown.
- */
 
-package com.bernardomg.example.spring_boot_actuator_example.config;
+package com.bernardomg.example.boot.actuator.controller.error;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+/**
+ * Controller for home view.
+ * 
+ * @author Bernardo Mart&iacute;nez Garrido
+ */
+@Controller
+public class ErrorController {
+
+    /**
+     * Name for the 404 error view.
+     */
+    private static final String VIEW_404 = "404";
+
+    /**
+     * Default constructor.
+     */
+    public ErrorController() {
+        super();
+    }
+
+    /**
+     * Shows the 404 error view.
+     * 
+     * @return the 404 error view
+     */
+    @RequestMapping("/404")
+    public String show404() {
+        return VIEW_404;
+    }
+
+}

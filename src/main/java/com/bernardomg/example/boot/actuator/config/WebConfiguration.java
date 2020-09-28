@@ -1,5 +1,5 @@
 
-package com.bernardomg.example.spring_boot_actuator_example.config;
+package com.bernardomg.example.boot.actuator.config;
 
 import org.springframework.boot.web.server.ErrorPage;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
