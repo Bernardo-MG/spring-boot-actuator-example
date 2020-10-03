@@ -13,6 +13,7 @@ Example showing how to set up Spring Boot actuators.
 - Spring Boot Actuators
 - Custom actuator endpoint
 - Custom Health Indicator
+- Custom Info Contributor
 - Info actuator showing git and build info
 
 ## Documentation

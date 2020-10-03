@@ -15,7 +15,7 @@
                 Registered more actuators.
             </action>
             <action dev="bmg" type="add">
-                Added custom endpoint.
+                Added custom endpoint components.
             </action>
         </release>
     </body>
