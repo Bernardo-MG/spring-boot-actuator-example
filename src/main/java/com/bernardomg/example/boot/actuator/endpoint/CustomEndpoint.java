@@ -30,14 +30,14 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Endpoint(id = "customEndpoint")
-public class CustomEndpoint {
+public final class CustomEndpoint {
 
     public CustomEndpoint() {
         super();
     }
 
     @ReadOperation
-    public String getData() {
+    public final String getData() {
         return "some data";
     }
 
