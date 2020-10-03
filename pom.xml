@@ -732,10 +732,7 @@
             <!-- Main resources -->
             <directory>src/main/resources/</directory>
             <includes>
-               <!-- Filter the application context -->
-               <include>context/application-context.xml</include>
-               <!-- Filter the persistence access properties -->
-               <include>config/persistence-access.properties</include>
+               <include>application.properties</include>
             </includes>
             <filtering>true</filtering>
          </resource>
