@@ -259,6 +259,7 @@
       <!-- ============================================== -->
       <!-- ============== PLUGINS VERSIONS ============== -->
       <!-- ============================================== -->
+      <plugin.gitid.version>4.0.2</plugin.gitid.version>
       <plugin.jshint.version>1.6.0</plugin.jshint.version>
       <plugin.minify.version>1.7.6</plugin.minify.version>
       <plugin.spring.boot.version>${spring.boot.version}</plugin.spring.boot.version>
@@ -874,6 +875,23 @@
                   </goals>
                </execution>
             </executions>
+         </plugin>
+         <plugin>
+            <!-- Git Commit Id plugin -->
+            <groupId>pl.project13.maven</groupId>
+            <artifactId>git-commit-id-plugin</artifactId>
+            <version>${plugin.gitid.version}</version>
+            <executions>
+               <execution>
+                  <id>get-the-git-infos</id>
+                  <goals>
+                     <goal>revision</goal>
+                  </goals>
+               </execution>
+            </executions>
+            <configuration>
+               <generateGitPropertiesFile>true</generateGitPropertiesFile>
+            </configuration>
          </plugin>
       </plugins>
    </build>
