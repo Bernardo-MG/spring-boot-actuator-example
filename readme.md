@@ -11,6 +11,8 @@ Example showing how to set up Spring Boot actuators.
 ## Features
 
 - Spring Boot Actuators
+- Custom actuator endpoint
+- Custom Health Indicator
 
 ## Documentation
 
