@@ -10,5 +10,13 @@
                 First version.
             </action>
         </release>
+        <release version="1.1.0" date="2020-09-28" description="More actuators">
+            <action dev="bmg" type="add">
+                Registered more actuators.
+            </action>
+            <action dev="bmg" type="add">
+                Added custom endpoint components.
+            </action>
+        </release>
     </body>
 </document>

@@ -11,6 +11,10 @@ Example showing how to set up Spring Boot actuators.
 ## Features
 
 - Spring Boot Actuators
+- Custom actuator endpoint
+- Custom Health Indicator
+- Custom Info Contributor
+- Info actuator showing git and build info
 
 ## Documentation
 
@@ -52,10 +56,10 @@ The project can be installed by creating the war file and deploying it into a se
 The project is prepared for running as a Spring Boot app:
 
 ```
-mvn spring-boot:run -P h2
+mvn spring-boot:run
 ```
 
-It will be accessible at [http://localhost:8080/].
+It will be accessible at [http://localhost:8080/](http://localhost:8080/).
 
 ### Running the tests
 

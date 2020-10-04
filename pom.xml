@@ -20,7 +20,7 @@
 
    <groupId>com.bernardomg.example</groupId>
    <artifactId>spring-boot-actuator-example</artifactId>
-   <version>1.0.0</version>
+   <version>1.1.0</version>
    <packaging>war</packaging>
 
    <name>Spring Boot Actuator Example</name>
@@ -231,7 +231,7 @@
       <glassfish.el>2.2</glassfish.el>
       <guava.version>29.0-jre</guava.version>
       <h2.version>1.4.200</h2.version>
-      <hamcrest.version>2.0.0.0</hamcrest.version>
+      <hamcrest.version>2.2</hamcrest.version>
       <hibernate.validator.version>5.4.3.Final</hibernate.validator.version>
       <hibernate.version>5.4.21.Final</hibernate.version>
       <hikari.version>3.4.5</hikari.version>
@@ -259,6 +259,7 @@
       <!-- ============================================== -->
       <!-- ============== PLUGINS VERSIONS ============== -->
       <!-- ============================================== -->
+      <plugin.gitid.version>4.0.2</plugin.gitid.version>
       <plugin.jshint.version>1.6.0</plugin.jshint.version>
       <plugin.minify.version>1.7.6</plugin.minify.version>
       <plugin.spring.boot.version>${spring.boot.version}</plugin.spring.boot.version>
@@ -424,6 +425,12 @@
          <!-- Spring Boot Starter: Cache -->
          <groupId>org.springframework.boot</groupId>
          <artifactId>spring-boot-starter-cache</artifactId>
+         <version>${spring.boot.version}</version>
+      </dependency>
+      <dependency>
+         <!-- Spring Boot Starter: log4j -->
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-log4j2</artifactId>
          <version>${spring.boot.version}</version>
       </dependency>
       <!-- ============================================== -->
@@ -654,7 +661,7 @@
       <dependency>
          <!-- Hamcrest -->
          <groupId>org.hamcrest</groupId>
-         <artifactId>java-hamcrest</artifactId>
+         <artifactId>hamcrest-core</artifactId>
          <version>${hamcrest.version}</version>
          <scope>test</scope>
       </dependency>
@@ -726,10 +733,7 @@
             <!-- Main resources -->
             <directory>src/main/resources/</directory>
             <includes>
-               <!-- Filter the application context -->
-               <include>context/application-context.xml</include>
-               <!-- Filter the persistence access properties -->
-               <include>config/persistence-access.properties</include>
+               <include>application.properties</include>
             </includes>
             <filtering>true</filtering>
          </resource>
@@ -866,11 +870,35 @@
             <version>${plugin.spring.boot.version}</version>
             <executions>
                <execution>
+                  <id>build-info</id>
+                  <goals>
+                     <goal>build-info</goal>
+                  </goals>
+               </execution>
+               <execution>
+                  <id>repackage</id>
                   <goals>
                      <goal>repackage</goal>
                   </goals>
                </execution>
             </executions>
+         </plugin>
+         <plugin>
+            <!-- Git Commit Id plugin -->
+            <groupId>pl.project13.maven</groupId>
+            <artifactId>git-commit-id-plugin</artifactId>
+            <version>${plugin.gitid.version}</version>
+            <executions>
+               <execution>
+                  <id>get-the-git-infos</id>
+                  <goals>
+                     <goal>revision</goal>
+                  </goals>
+               </execution>
+            </executions>
+            <configuration>
+               <generateGitPropertiesFile>true</generateGitPropertiesFile>
+            </configuration>
          </plugin>
       </plugins>
    </build>
