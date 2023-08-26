@@ -24,9 +24,6 @@
 
 package com.bernardomg.example.boot.actuator.controller.error;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -34,20 +31,20 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver;
 
+import jakarta.servlet.http.HttpServletRequest;
+
 /**
  * Captures and handles exceptions for all the controllers.
- * 
+ *
  * @author Bernardo Mart&iacute;nez Garrido
  */
 @ControllerAdvice
-public class GlobalExceptionHandler
-        extends AbstractHandlerExceptionResolver {
+public class GlobalExceptionHandler extends AbstractHandlerExceptionResolver {
 
     /**
      * Logger for the exception handler.
      */
-    private static final Logger LOGGER         = LoggerFactory
-            .getLogger(GlobalExceptionHandler.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
     /**
      * Default constructor.
@@ -58,16 +55,16 @@ public class GlobalExceptionHandler
 
     @Override
     protected final ModelAndView doResolveException(final HttpServletRequest request,
-            final HttpServletResponse response, final Object handler,
-            final Exception ex) {
+            final jakarta.servlet.http.HttpServletResponse response, final Object handler, final Exception ex) {
         final ModelAndView modelView;
 
         LOGGER.error(ex.getMessage(), ex);
 
         modelView = new ModelAndView(ErrorViewConstants.VIEW_ERROR);
-        modelView.getModel().put("code",
-                HttpStatus.INTERNAL_SERVER_ERROR.value());
-        modelView.getModel().put("message", ex.getMessage());
+        modelView.getModel()
+            .put("code", HttpStatus.INTERNAL_SERVER_ERROR.value());
+        modelView.getModel()
+            .put("message", ex.getMessage());
 
         return modelView;
     }

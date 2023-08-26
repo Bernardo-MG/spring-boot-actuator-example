@@ -21,7 +21,6 @@
          <bottomNav>
             <menu>General Info</menu>
             <menu>Code</menu>
-            <menu>Releases</menu>
          </bottomNav>
          <iconNav>
             <menu>Icons</menu>
@@ -31,8 +30,12 @@
 
    <body>
       <menu name="General Info" inherit="top">
+         <item name="Usage" href="./usage.html" />
          <item name="Changes Log" href="./changes-report.html" />
          <item name="JavaDocs" href="./apidocs/" />
+      </menu>
+      <menu name="Documentation" inherit="bottom">
+         <item name="Usage" href="./usage.html" />
       </menu>
       <menu name="Info and reports" inherit="bottom">
          <item name="Info" href="./info.html" />
@@ -51,7 +54,7 @@
          </item>
       </menu>
       <menu name="Icons" inherit="bottom">
-         <item name="Github" img="github" href="${project.scm.url}" />
+         <item name="Github" img="fab fa-github" href="${project.scm.url}" />
       </menu>
    </body>
 
