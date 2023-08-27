@@ -155,18 +155,10 @@
       <spring.boot.version>3.1.0</spring.boot.version>
       <spring.data.version>2023.0.0</spring.data.version>
       <spring.version>6.0.9</spring.version>
-      <webjars.bootstrap.version>3.4.1</webjars.bootstrap.version>
-      <webjars.bootswatch.version>3.3.7</webjars.bootswatch.version>
-      <webjars.fontAwesome.version>5.7.2</webjars.fontAwesome.version>
-      <webjars.html5shiv.version>3.7.3-1</webjars.html5shiv.version>
-      <webjars.jquery.version>3.3.1-2</webjars.jquery.version>
-      <webjars.locator.version>0.34</webjars.locator.version>
       <!-- ============================================== -->
       <!-- ============== PLUGINS VERSIONS ============== -->
       <!-- ============================================== -->
       <plugin.gitid.version>4.0.2</plugin.gitid.version>
-      <plugin.jshint.version>1.6.0</plugin.jshint.version>
-      <plugin.minify.version>1.7.6</plugin.minify.version>
       <plugin.spring.boot.version>${spring.boot.version}</plugin.spring.boot.version>
       <!-- ============================================== -->
       <!-- ============ PLUGIN CONFIGURATION ============ -->
@@ -247,11 +239,6 @@
          <artifactId>spring-data-jpa</artifactId>
       </dependency>
       <dependency>
-         <!-- Spring JDBC -->
-         <groupId>org.springframework</groupId>
-         <artifactId>spring-jdbc</artifactId>
-      </dependency>
-      <dependency>
          <!-- Spring OXM -->
          <groupId>org.springframework</groupId>
          <artifactId>spring-oxm</artifactId>
@@ -301,6 +288,11 @@
          <artifactId>spring-boot-starter-data-jpa</artifactId>
       </dependency>
       <dependency>
+         <!-- Spring Boot Starter: log4j -->
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-log4j2</artifactId>
+      </dependency>
+      <dependency>
          <!-- Spring Boot Starter: Devtools -->
          <groupId>org.springframework.boot</groupId>
          <artifactId>spring-boot-devtools</artifactId>
@@ -318,14 +310,9 @@
          <artifactId>spring-boot-starter-actuator</artifactId>
       </dependency>
       <dependency>
-         <!-- Spring Boot Starter: Cache -->
+         <!-- Spring Boot Actuator -->
          <groupId>org.springframework.boot</groupId>
-         <artifactId>spring-boot-starter-cache</artifactId>
-      </dependency>
-      <dependency>
-         <!-- Spring Boot Starter: log4j -->
-         <groupId>org.springframework.boot</groupId>
-         <artifactId>spring-boot-starter-log4j2</artifactId>
+         <artifactId>spring-boot-actuator</artifactId>
       </dependency>
       <!-- ============================================== -->
       <!-- ================= ASPECTJ ==================== -->
@@ -370,14 +357,6 @@
          <artifactId>snakeyaml</artifactId>
       </dependency>
       <!-- ============================================== -->
-      <!-- ================ THYMELEAF =================== -->
-      <!-- ============================================== -->
-      <dependency>
-         <!-- Thymeleaf -->
-         <groupId>org.thymeleaf</groupId>
-         <artifactId>thymeleaf</artifactId>
-      </dependency>
-      <!-- ============================================== -->
       <!-- ================ SERVLET ===================== -->
       <!-- ============================================== -->
       <dependency>
@@ -394,45 +373,6 @@
          <!-- H2 database -->
          <groupId>com.h2database</groupId>
          <artifactId>h2</artifactId>
-      </dependency>
-      <!-- ============================================== -->
-      <!-- ================ WEBJARS ===================== -->
-      <!-- ============================================== -->
-      <dependency>
-         <!-- Bootstrap -->
-         <groupId>org.webjars</groupId>
-         <artifactId>bootstrap</artifactId>
-         <version>${webjars.bootstrap.version}</version>
-      </dependency>
-      <dependency>
-         <!-- Bootswatch Readable -->
-         <groupId>org.webjars</groupId>
-         <artifactId>bootswatch-readable</artifactId>
-         <version>${webjars.bootswatch.version}</version>
-      </dependency>
-      <dependency>
-         <!-- Font Awesome -->
-         <groupId>org.webjars</groupId>
-         <artifactId>font-awesome</artifactId>
-         <version>${webjars.fontAwesome.version}</version>
-      </dependency>
-      <dependency>
-         <!-- HTML5 Shiv -->
-         <groupId>org.webjars</groupId>
-         <artifactId>html5shiv</artifactId>
-         <version>${webjars.html5shiv.version}</version>
-      </dependency>
-      <dependency>
-         <!-- JQuery -->
-         <groupId>org.webjars</groupId>
-         <artifactId>jquery</artifactId>
-         <version>${webjars.jquery.version}</version>
-      </dependency>
-      <dependency>
-         <!-- Webjars Locator -->
-         <groupId>org.webjars</groupId>
-         <artifactId>webjars-locator</artifactId>
-         <version>${webjars.locator.version}</version>
       </dependency>
       <!-- ============================================== -->
       <!-- ================== LOGGING =================== -->
@@ -575,25 +515,6 @@
             <filtering>true</filtering>
          </resource>
       </resources>
-      <pluginManagement>
-         <plugins>
-            <!-- Plugin versions and configurations are enforced here. -->
-            <plugin>
-               <!-- JSHint -->
-               <!-- Validates Javascript files. -->
-               <groupId>com.cj.jshintmojo</groupId>
-               <artifactId>jshint-maven-plugin</artifactId>
-               <version>${plugin.jshint.version}</version>
-            </plugin>
-            <plugin>
-               <!-- Minify -->
-               <!-- Minifies files. -->
-               <groupId>com.samaxes.maven</groupId>
-               <artifactId>minify-maven-plugin</artifactId>
-               <version>${plugin.minify.version}</version>
-            </plugin>
-         </plugins>
-      </pluginManagement>
       <plugins>
          <plugin>
             <!-- Changes -->
@@ -637,30 +558,6 @@
             </dependencies>
          </plugin>
          <plugin>
-            <!-- Minify -->
-            <!-- Minifies files. -->
-            <groupId>com.samaxes.maven</groupId>
-            <artifactId>minify-maven-plugin</artifactId>
-            <executions>
-               <execution>
-                  <id>default-minify</id>
-                  <phase>generate-resources</phase>
-                  <configuration>
-                     <webappSourceDir>${basedir}/src/main/resources/static</webappSourceDir>
-                     <webappTargetDir>${project.build.outputDirectory}/static</webappTargetDir>
-                     <cssSourceDir>/css</cssSourceDir>
-                     <cssSourceIncludes>
-                        <cssSourceInclude>**</cssSourceInclude>
-                     </cssSourceIncludes>
-                     <cssFinalFile>style.css</cssFinalFile>
-                  </configuration>
-                  <goals>
-                     <goal>minify</goal>
-                  </goals>
-               </execution>
-            </executions>
-         </plugin>
-         <plugin>
             <!-- Resources -->
             <!-- Handles the project resources. -->
             <groupId>org.apache.maven.plugins</groupId>
@@ -673,30 +570,6 @@
                <delimiters>
                   <delimiter>@</delimiter>
                </delimiters>
-            </configuration>
-         </plugin>
-         <plugin>
-            <!-- JSHint -->
-            <!-- Validates Javascript files. -->
-            <groupId>com.cj.jshintmojo</groupId>
-            <artifactId>jshint-maven-plugin</artifactId>
-            <executions>
-               <execution>
-                  <id>jshint</id>
-                  <phase>test</phase>
-                  <goals>
-                     <goal>lint</goal>
-                  </goals>
-               </execution>
-            </executions>
-            <configuration>
-               <options>maxdepth:3,latedef,nonew,jquery</options>
-               <directories>
-                  <directory>src/main/resources/static/js</directory>
-               </directories>
-               <reporter>checkstyle</reporter>
-               <reportFile>target/jshint.xml</reportFile>
-               <failOnError>true</failOnError>
             </configuration>
          </plugin>
          <plugin>

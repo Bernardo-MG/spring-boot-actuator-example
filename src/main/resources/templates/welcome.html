@@ -6,11 +6,13 @@
 <body>
    <header class="header" th:include="fragments/menu :: menu" />
 
-   <section id="main-section" class="container-fluid">
-      <header class="page-header">
+   <section id="main-section" class="container flex-grow-1 py-2">
+      
+      <header>
          <h1 th:text="#{application.title}">Webapp Title</h1>
       </header>
-      <p>This is the welcome page.</p>
+      
+      <p>Example showing how to set up Spring Boot actuators.</p>
    </section>
 
    <footer>
