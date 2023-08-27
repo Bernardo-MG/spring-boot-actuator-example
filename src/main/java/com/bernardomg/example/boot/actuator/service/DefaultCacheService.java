@@ -29,7 +29,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * Default implementation of the example entity service.
- * 
+ *
  * @author Bernardo Mart&iacute;nez Garrido
  *
  */

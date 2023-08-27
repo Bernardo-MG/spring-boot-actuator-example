@@ -39,8 +39,7 @@ public final class CustomInfoContributor implements InfoContributor {
 
     @Override
     public void contribute(final Builder builder) {
-        builder.withDetail("customInfo",
-                Collections.singletonMap("key", "value"));
+        builder.withDetail("customInfo", Collections.singletonMap("key", "value"));
     }
 
 }

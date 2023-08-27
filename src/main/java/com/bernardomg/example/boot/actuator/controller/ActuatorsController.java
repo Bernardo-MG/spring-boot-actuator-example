@@ -31,7 +31,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * Controller for the home view.
- * 
+ *
  * @author Bernardo Mart&iacute;nez Garrido
  */
 @Controller
@@ -47,7 +47,7 @@ public class ActuatorsController {
 
     /**
      * Shows the actuators list.
-     * 
+     *
      * @return the actuators list
      */
     @GetMapping(path = "/list", produces = MediaType.TEXT_HTML_VALUE)

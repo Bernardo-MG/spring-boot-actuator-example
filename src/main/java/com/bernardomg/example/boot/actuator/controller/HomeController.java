@@ -31,7 +31,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * Controller for the home view.
- * 
+ *
  * @author Bernardo Mart&iacute;nez Garrido
  */
 @Controller
@@ -47,7 +47,7 @@ public class HomeController {
 
     /**
      * Shows the welcome view.
-     * 
+     *
      * @return the welcome view
      */
     @GetMapping(produces = MediaType.TEXT_HTML_VALUE)

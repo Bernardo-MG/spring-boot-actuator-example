@@ -37,7 +37,9 @@ public final class CustomHealthIndicator implements HealthIndicator {
 
     @Override
     public final Health health() {
-        return Health.up().withDetail("someDetail", "ok").build();
+        return Health.up()
+            .withDetail("someDetail", "ok")
+            .build();
     }
 
 }
