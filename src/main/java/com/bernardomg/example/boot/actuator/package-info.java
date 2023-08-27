@@ -1,7 +1,7 @@
 /**
  * The MIT License (MIT)
  * <p>
- * Copyright (c) 2020 the original author or authors.
+ * Copyright (c) 2020-2023 the original author or authors.
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,8 +24,7 @@
 /**
  * Application root package.
  * <p>
- * This is where the main class is contained. All the subpackages will be
- * scanned by the Spring Boot application.
+ * This is where the main class is contained. All the subpackages will be scanned by the Spring Boot application.
  */
 
 package com.bernardomg.example.boot.actuator;

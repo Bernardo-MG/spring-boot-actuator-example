@@ -1,7 +1,7 @@
 /**
  * The MIT License (MIT)
  * <p>
- * Copyright (c) 2020 the original author or authors.
+ * Copyright (c) 2020-2023 the original author or authors.
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -26,7 +26,7 @@ package com.bernardomg.example.boot.actuator.controller.error;
 
 /**
  * Constants for the error view controllers.
- * 
+ *
  * @author Bernardo Mart&iacute;nez Garrido
  */
 public final class ErrorViewConstants {
@@ -34,7 +34,7 @@ public final class ErrorViewConstants {
     /**
      * Name for the error view.
      */
-    public static final String VIEW_ERROR   = "exception";
+    public static final String VIEW_ERROR = "exception";
 
     /**
      * Private constructor to avoid initialization.

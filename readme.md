@@ -1,6 +1,14 @@
 # Spring Boot Actuator Example
 
-Example showing how to set up Spring Boot actuators.
+Sets up several Spring Boot actuators, and a webpage to list and access them.
+
+Just run it:
+
+```
+mvn spring-boot:run
+```
+
+Then visit [http://localhost:8080/](http://localhost:8080/).
 
 [![Release docs](https://img.shields.io/badge/docs-release-blue.svg)][site-release]
 [![Development docs](https://img.shields.io/badge/docs-develop-blue.svg)][site-develop]
@@ -36,32 +44,7 @@ mvn verify site
 
 The verify phase is required, otherwise some of the reports won't be generated.
 
-## Usage
-
-The application is coded in Java, using Maven to manage the project.
-
-### Prerequisites
-
-The project has been tested on the following Java versions:
-* JDK 8
-
-All other dependencies are handled through Maven, and noted in the included POM file.
-
-### Installing
-
-The project can be installed by creating the war file and deploying it into a server.
-
-### Running
-
-The project is prepared for running as a Spring Boot app:
-
-```
-mvn spring-boot:run
-```
-
-It will be accessible at [http://localhost:8080/](http://localhost:8080/).
-
-### Running the tests
+## Running the tests
 
 The project requires a database and a server for being able to run the integration tests.
 

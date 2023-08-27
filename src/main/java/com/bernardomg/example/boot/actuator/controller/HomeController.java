@@ -1,7 +1,7 @@
 /**
  * The MIT License (MIT)
  * <p>
- * Copyright (c) 2020 the original author or authors.
+ * Copyright (c) 2020-2023 the original author or authors.
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -31,7 +31,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * Controller for the home view.
- * 
+ *
  * @author Bernardo Mart&iacute;nez Garrido
  */
 @Controller
@@ -47,7 +47,7 @@ public class HomeController {
 
     /**
      * Shows the welcome view.
-     * 
+     *
      * @return the welcome view
      */
     @GetMapping(produces = MediaType.TEXT_HTML_VALUE)

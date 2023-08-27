@@ -1,11 +1,11 @@
 # Spring Boot Actuator Example
 
-Example showing how to set up Spring Boot actuators.
+Sets up several Spring Boot actuators, and a webpage to list and access them.
 
 Just run it:
 
 ```
-mvn spring-boot:run -P h2
+mvn spring-boot:run
 ```
 
-It will be accessible at [http://localhost:8080/].
+Then visit [http://localhost:8080/](http://localhost:8080/).
