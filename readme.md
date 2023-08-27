@@ -1,14 +1,14 @@
 # Spring Boot Actuator Example
 
-Example showing how to set up Spring Boot actuators.
+Sets up several Spring Boot actuators, and a webpage to list and access them.
 
-To run the project locally use the following Maven command:
+Just run it:
 
 ```
 mvn spring-boot:run
 ```
 
-It will be accessible at [http://localhost:8080/](http://localhost:8080/).
+Then visit [http://localhost:8080/](http://localhost:8080/).
 
 [![Release docs](https://img.shields.io/badge/docs-release-blue.svg)][site-release]
 [![Development docs](https://img.shields.io/badge/docs-develop-blue.svg)][site-develop]
